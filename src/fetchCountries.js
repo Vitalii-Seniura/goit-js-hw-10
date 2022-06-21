@@ -6,3 +6,6 @@ export const fetchCountries = name => {
     return response.json();
   });
 };
+
+
+https://restcountries.com/v2/all?fields=name.official,capital,population,flags.svg,languages
