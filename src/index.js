@@ -9,14 +9,15 @@ const DEBOUNCE_DELAY = 300;
 
 
 const form = document.querySelector('.search-box');
-const profileContainer = document.querySelector('.profile-container');
+const countryList = document.querySelector('.country-list');
+const countryInfo = document.querySelector('.country-info');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  fetchUser(form.elements.username.value)
-    .then(user => {
-      profileContainer.innerHTML = buildProfileMarkup(user);
+  fetchCountries(form.elements.name.value)
+    .then(country => {
+      profileContainer.innerHTML = buildProfileMarkup(country);
     })
     .catch(() => {
       profileContainer.innerHTML = buildErrorScreen();
