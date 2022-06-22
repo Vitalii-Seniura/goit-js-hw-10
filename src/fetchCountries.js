@@ -7,5 +7,3 @@ export const fetchCountries = name => {
     return response.json();
   });
 };
-
-

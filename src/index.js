@@ -12,7 +12,7 @@ const form = document.querySelector('.search-box');
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
-form.addEventListener('submit', event => {
+form.addEventListener('input', event => {
   event.preventDefault();
 
   fetchCountries(form.elements.name.value)
