@@ -1,5 +1,5 @@
-export const fetchCountries = name => {
-  return fetch(`https://restcountries.com/v2/all?fields=${name}.official,capital,population,flags.svg,languages
+export const fetchCountries = (name) => {
+  return fetch(`https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages
 `).then(response => {
     if (!response.ok) {
       throw new Error(response.statusText);
@@ -7,3 +7,5 @@ export const fetchCountries = name => {
     return response.json();
   });
 };
+
+
