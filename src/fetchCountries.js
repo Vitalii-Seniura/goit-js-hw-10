@@ -1,5 +1,6 @@
 export const fetchCountries = name => {
-  return fetch(`https://restcountries.com/#api-endpoints-v3-name/${name}`).then(response => {
+  return fetch(`https://restcountries.com/v2/all?fields=${name}.official,capital,population,flags.svg,languages
+`).then(response => {
     if (!response.ok) {
       throw new Error(response.statusText);
     }
@@ -8,4 +9,3 @@ export const fetchCountries = name => {
 };
 
 
-https://restcountries.com/v2/all?fields=name.official,capital,population,flags.svg,languages

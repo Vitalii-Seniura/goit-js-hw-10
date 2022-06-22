@@ -17,10 +17,10 @@ form.addEventListener('submit', event => {
 
   fetchCountries(form.elements.name.value)
     .then(country => {
-      profileContainer.innerHTML = buildProfileMarkup(country);
+      profileContainer.insertAdjacentHTML = buildProfileMarkup(country);
     })
     .catch(() => {
-      profileContainer.innerHTML = buildErrorScreen();
+      profileContainer.insertAdjacentHTML = buildErrorScreen();
     });
 
   form.reset();
